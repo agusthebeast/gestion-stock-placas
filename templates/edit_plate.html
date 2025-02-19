@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Placa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Editar Placa</h2>
+        <form method="POST">
+            <input type="text" name="codigo" value="{{ placa[1] }}" required>
+            <input type="text" name="tipo" value="{{ placa[2] }}" required>
+            <input type="text" name="marca" value="{{ placa[3] }}" required>
+            <input type="text" name="modelo" value="{{ placa[4] }}" required>
+            <input type="number" name="cantidad" value="{{ placa[5] }}" required>
+            <input type="text" name="equivalentes" value="{{ placa[6] }}">
+            <button type="submit">Guardar Cambios</button>
+        </form>
+        <br>
+        <a href="{{ url_for('index') }}"><button>Volver</button></a>
+    </div>
+</body>
+</html>
